@@ -1,0 +1,4 @@
+provider,statement_date,due_date,account_hint,label,amount,currency,category,cadence
+Example Energy,2026-03-01,2026-03-20,METER-4400123,Base service charge,18.00,USD,recurring,monthly
+Example Energy,2026-03-01,2026-03-20,METER-4400123,Electricity usage,64.22,USD,usage,unknown
+Example Energy,2026-03-01,2026-03-20,METER-4400123,Local energy tax,3.10,USD,tax,unknown

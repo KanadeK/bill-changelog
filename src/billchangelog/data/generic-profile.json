@@ -1,0 +1,33 @@
+{
+  "name": "generic-consumer-bill",
+  "currency": "USD",
+  "match_threshold": 0.72,
+  "high_monthly_delta": "10.00",
+  "high_annual_delta": "120.00",
+  "aliases": {},
+  "category_patterns": {
+    "discount": ["\\bdiscount\\b", "\\bcredit\\b", "\\bpromo(?:tion)?\\b", "优惠", "折扣", "减免"],
+    "tax": ["\\btax(?:es)?\\b", "\\bvat\\b", "\\bgst\\b", "税"],
+    "fee": ["\\bfee\\b", "\\bsurcharge\\b", "\\bservice charge\\b", "附加费", "手续费"],
+    "usage": ["\\busage\\b", "\\boverage\\b", "\\bper (?:gb|kwh|unit)\\b", "用量", "超量"],
+    "one_time": ["\\bone[ -]?time\\b", "\\bactivation\\b", "\\binstallation\\b", "一次性", "安装"],
+    "recurring": ["\\bplan\\b", "\\bsubscription\\b", "\\bmonthly\\b", "\\bequipment installment\\b", "套餐", "月租", "订阅"],
+    "other": []
+  },
+  "monthly_patterns": ["\\bmonthly\\b", "\\bper month\\b", "\\bplan\\b", "\\bsubscription\\b", "套餐", "月租", "每月"],
+  "one_time_patterns": ["\\bone[ -]?time\\b", "\\bactivation\\b", "\\binstallation\\b", "一次性", "安装"],
+  "ignore_patterns": [
+    "^previous balance$",
+    "^balance forward$",
+    "^payment(?:s)? received$",
+    "^amount paid$"
+  ],
+  "total_patterns": [
+    "^total$",
+    "^total due$",
+    "^total amount due$",
+    "^amount due$",
+    "^current charges$",
+    "^new charges$"
+  ]
+}

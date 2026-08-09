@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    name: Verify and publish assets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - uses: astral-sh/setup-uv@v9
+        with:
+          version: "0.11.20"
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+      - name: Install locked dependencies
+        run: uv sync --extra dev --locked
+      - name: Run full acceptance gate
+        run: uv run python scripts/verify.py
+      - name: Check release metadata and Git history
+        run: uv run python scripts/release_check.py --json --strict
+      - name: Attest release assets
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: |
+            release-dist/*.whl
+            release-dist/*.tar.gz
+            release-dist/*.pyz
+            release-dist/*.zip
+            release-dist/SHA256SUMS
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          body_path: RELEASE_NOTES.md
+          fail_on_unmatched_files: true
+          files: |
+            release-dist/*.whl
+            release-dist/*.tar.gz
+            release-dist/*.pyz
+            release-dist/*.zip
+            release-dist/SHA256SUMS

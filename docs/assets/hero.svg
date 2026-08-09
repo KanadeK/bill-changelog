@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Bill Changelog</title>
+  <desc id="desc">Two monthly statements flow into a local evidence report showing a removed discount, a plan increase, and a new fee.</desc>
+  <rect width="1200" height="520" rx="24" fill="#f2eee2"/>
+  <path d="M0 430C190 370 340 480 520 420s330-40 680 30v70H0z" fill="#d8dfc7"/>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace">
+    <text x="58" y="82" font-size="20" letter-spacing="5" fill="#647168">LOCAL-FIRST · NO UPLOAD · SHA-256 EVIDENCE</text>
+    <text x="55" y="158" font-size="72" font-weight="800" letter-spacing="-5" fill="#17221c">BILL CHANGELOG</text>
+    <text x="59" y="199" font-size="25" fill="#44534a">Your bills changed. Read the release notes.</text>
+    <g transform="translate(58 242)">
+      <rect width="318" height="188" rx="12" fill="#fffdf7" stroke="#cfc7b5" stroke-width="3"/>
+      <text x="22" y="35" font-size="17" fill="#647168">JANUARY · statement.txt</text>
+      <text x="22" y="75" font-size="19" fill="#17221c">Unlimited plan</text><text x="290" y="75" text-anchor="end" font-size="19" fill="#17221c">$65</text>
+      <text x="22" y="112" font-size="19" fill="#1d7350">Autopay discount</text><text x="290" y="112" text-anchor="end" font-size="19" fill="#1d7350">-$10</text>
+      <text x="22" y="149" font-size="19" fill="#17221c">Device</text><text x="290" y="149" text-anchor="end" font-size="19" fill="#17221c">$18</text>
+    </g>
+    <g transform="translate(442 242)">
+      <path d="M0 94h72" stroke="#9a6500" stroke-width="8"/><path d="m60 78 22 16-22 16" fill="none" stroke="#9a6500" stroke-width="8"/>
+      <text x="36" y="62" text-anchor="middle" font-size="15" fill="#647168">DIFF</text>
+    </g>
+    <g transform="translate(548 222)">
+      <rect width="594" height="228" rx="12" fill="#17221c" stroke="#17221c" stroke-width="3"/>
+      <text x="24" y="38" font-size="16" fill="#aeb9b0">FEBRUARY CHANGELOG · 4 REVIEW ITEMS</text>
+      <rect x="24" y="58" width="546" height="42" rx="7" fill="#3a2924"/>
+      <text x="38" y="85" font-size="17" fill="#ffb4a8">HIGH  discount removed</text><text x="548" y="85" text-anchor="end" font-size="17" fill="#ffb4a8">+$10/mo</text>
+      <rect x="24" y="108" width="546" height="42" rx="7" fill="#3a2924"/>
+      <text x="38" y="135" font-size="17" fill="#ffb4a8">HIGH  plan increased</text><text x="548" y="135" text-anchor="end" font-size="17" fill="#ffb4a8">+$10/mo</text>
+      <rect x="24" y="158" width="546" height="42" rx="7" fill="#3a3523"/>
+      <text x="38" y="185" font-size="17" fill="#ffd585">MED   access fee added</text><text x="548" y="185" text-anchor="end" font-size="17" fill="#ffd585">+$3/mo</text>
+      <text x="24" y="222" font-size="16" fill="#b9d7c4">annualized impact  +$276 · every item cites its source line</text>
+    </g>
+  </g>
+</svg>

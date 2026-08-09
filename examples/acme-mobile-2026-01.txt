@@ -1,0 +1,11 @@
+Provider: Acme Mobile
+Account number: 88310492
+Statement date: 2026-01-15
+Billing period: 2025-12-15 to 2026-01-14
+Due date: 2026-02-05
+
+Unlimited 5G Plan | $65.00 | recurring | monthly
+Autopay discount | -$10.00 | discount | monthly
+Device installment | $18.00 | recurring | monthly
+State telecom tax | $3.25 | tax | unknown
+Total due | $76.25
